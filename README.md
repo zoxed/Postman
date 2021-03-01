@@ -1,15 +1,16 @@
-Simple Books API
+# Simple Books API #
 This API allows you to reserve a book.
 
 The API is available at https://simple-books-api.glitch.me
 
-Endpoints
-Status
+
+## Endpoints ##
+
+### Status ###
 GET /status
+### Retruns the status of the API. ###
 
-Retruns the status of the API.
-
-List of books
+### List of books ###
 GET /books
 
 Returns a list of books
@@ -18,12 +19,13 @@ Optional query parameters:
 
 type: fiction or non-fiction
 limit: a number between 1 and 20.
-Get a single book
+
+### Get a single book ###
 GET /books/:bookId
 
 Retrive detailed information about a book.
 
-Submit an order
+### Submit an order ###
 POST /orders
 
 Allows you to submit a new order. Requires authentication.
@@ -90,9 +92,9 @@ The request body needs to be in JSON format and include the following properties
 clientName - String
 clientEmail - String
 Example
-
+'''
 {
-   "clientName": "Zoxed",
-   "clientEmail": "zoxed@example.com"
+   "clientName": "Valentin",
+   "clientEmail": "valentin@example.com"
 }
 The response body will contain the access token.
